@@ -43,6 +43,13 @@ app.get('/about', (req, res) => {
    });
 });
 
+app.get('/projects', (req, res) => {
+   res.render('projects.hbs', {
+      pageTitle: 'Projects Page',
+      pfText: 'These are my GitHub Projects'
+   });
+});
+
 app.get('/bad', (req, res) => {
    res.send({
       errMessage: 'URL not found'
